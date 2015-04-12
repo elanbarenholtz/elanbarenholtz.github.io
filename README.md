@@ -1,2 +1,2 @@
-# mpcrlab.github.io
-MPCR Web Page
+# elanbarenholtz.github.io
+Elan and Visual Mind Lab Web Page
