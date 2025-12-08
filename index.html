@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elan Barenholtz, PhD | The Autoregressive Brain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a5f7a;
+            --secondary-color: #2c3e50;
+            --text-dark: #2d3748;
+            --text-light: #4a5568;
+            --bg-light: #f7fafc;
+            --bg-white: #ffffff;
+            --border-color: #e2e8f0;
+            --accent-hover: #165166;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        section:nth-child(even) {
+            background: var(--bg-light);
+        }
+
+        /* Hero Section */
+        #hero {
+            margin-top: 60px;
+            padding: 6rem 0;
+            background: var(--bg-white);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-image {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .hero-text .title {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+            font-weight: 400;
+        }
+
+        .hero-text .subtitle {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero-hook {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .hero-text p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        /* Headings */
+        h2 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-subheading {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+        }
+
+        /* Theory Section */
+        .theory-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .theory-content p {
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        /* Propositions Grid */
+        .propositions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .proposition-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .proposition-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .proposition-card h4 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .proposition-card p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-light);
+        }
+
+        /* Research Items */
+        .research-items {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            max-width: 900px;
+            margin: 2.5rem auto 0;
+        }
+
+        .research-item h4 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .research-item p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .research-status {
+            font-size: 0.9rem;
+            font-style: italic;
+            color: var(--primary-color);
+            margin-top: 0.5rem;
+        }
+
+        /* Evidence Section */
+        .evidence-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .experiment-box {
+            background: var(--bg-white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .experiment-box h4 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .experiment-box p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .conditions-list {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 6px;
+        }
+
+        .condition-item {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .condition-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .condition-label {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .condition-example {
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        .results-box {
+            background: #f0f9ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .results-box p {
+            margin-bottom: 0.75rem;
+        }
+
+        .results-formula {
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            color: var(--text-dark);
+            font-weight: 600;
+            margin: 1rem 0;
+        }
+
+        /* Writing & Media */
+        .writing-items {
+            max-width: 900px;
+            margin: 2rem auto 0;
+        }
+
+        .writing-item {
+            margin-bottom: 2rem;
+        }
+
+        .writing-item h4 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .writing-item p {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .writing-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .writing-item a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        .episode-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Affiliations */
+        .affiliations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .affiliation-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .affiliation-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .affiliation-card h4 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .affiliation-role {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .affiliation-card p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .affiliation-card a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .affiliation-card a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        /* Contact */
+        .contact-content {
+            max-width: 600px;
+            margin: 2rem auto 0;
+            font-size: 1.1rem;
+        }
+
+        .contact-item {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            color: var(--text-dark);
+            min-width: 100px;
+        }
+
+        .contact-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-image {
+                margin: 0 auto;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-hook {
+                font-size: 1.25rem;
+            }
+
+            nav a {
+                margin: 0 0.75rem;
+                font-size: 0.85rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .propositions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .affiliations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .condition-item {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="#theory">Theory</a>
+            <a href="#research">Research</a>
+            <a href="#evidence">Evidence</a>
+            <a href="#writing">Writing</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="elan-headshot.jpg" alt="Elan Barenholtz">
+                </div>
+                <div class="hero-text">
+                    <h1>Elan Barenholtz, PhD</h1>
+                    <p class="title">Professor of Psychology, Florida Atlantic University</p>
+                    <p class="subtitle">Associate Director, Center for the Future Mind</p>
+
+                    <div class="hero-hook">
+                        Developing a new framework for understanding cognition, memory, and consciousness
+                    </div>
+
+                    <p>
+                        I study how minds work by taking seriously what large language models have revealed: that sophisticated cognitive processes can emerge from sequential prediction over learned structure. This has led me to propose that human cognition operates autoregressively — generating each mental state from the preceding one, rather than storing and retrieving fixed representations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Autoregressive Brain -->
+    <section id="theory">
+        <div class="container">
+            <h2>The Autoregressive Brain</h2>
+            <p class="section-subheading">A new framework for cognition, memory, and language</p>
+
+            <div class="theory-content">
+                <p>
+                    For over a century, cognitive science has assumed that memory works like a warehouse: experiences are encoded, stored, and later retrieved. But this storage-retrieval model has always struggled with basic facts about how memory actually behaves — its reconstructive nature, its sensitivity to context, its seamless integration with imagination and prediction.
+                </p>
+
+                <p>
+                    Large language models offer a different picture. LLMs have no explicit memory store, yet they exhibit sophisticated memory-like behaviors. They generate contextually appropriate continuations by predicting each token from the preceding sequence, constrained by distributional patterns learned during training. I propose that biological cognition works the same way: what we call 'memory' is not retrieval from storage but generative potential — the capacity to regenerate trajectories through cognitive state-space.
+                </p>
+
+                <p>
+                    This autoregressive framework reconceptualizes not just memory, but language, consciousness, and cognition more broadly. Language is not processed by applying grammatical rules; it is generated through distributional constraints learned over a lifetime. Consciousness is not a separate faculty observing cognition; it emerges from the system's recursive modeling of its own generative process. The self is not an entity but a trajectory.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Propositions -->
+    <section id="propositions">
+        <div class="container">
+            <h2>Key Propositions</h2>
+
+            <div class="propositions-grid">
+                <div class="proposition-card">
+                    <h4>Generation, Not Retrieval</h4>
+                    <p>
+                        Remembering is reconstructive generation, not playback from storage. Memory is the capacity to regenerate experiential trajectories, constrained by learned structure. This explains why memories are context-sensitive, malleable, and seamlessly continuous with imagination.
+                    </p>
+                </div>
+
+                <div class="proposition-card">
+                    <h4>Syntax as Distributional Epiphenomenon</h4>
+                    <p>
+                        What linguists call 'grammar' is not a rule system but the skeletal structure of distributional statistics. Function words and morphological markers are high-leverage tokens that constrain sequential prediction. Syntax is an epiphenomenon of learned co-occurrence patterns.
+                    </p>
+                </div>
+
+                <div class="proposition-card">
+                    <h4>Consciousness as Recursive Autoregression</h4>
+                    <p>
+                        Subjective experience emerges from the cognitive system modeling its own generative process. The 'self' that seems to persist across time is a trajectory through state-space, not an entity doing the experiencing. Unity of consciousness reflects continuity of generation.
+                    </p>
+                </div>
+
+                <div class="proposition-card">
+                    <h4>LLMs as Existence Proofs</h4>
+                    <p>
+                        Large language models demonstrate that sophisticated cognition-like processes — composition, apparent reasoning, memory-like behavior — can emerge from autoregressive prediction without explicit storage, retrieval, or rule systems. They are not models of the brain, but they prove what distributional learning can accomplish.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Research -->
+    <section id="research">
+        <div class="container">
+            <h2>Current Research</h2>
+
+            <div class="research-items">
+                <div class="research-item">
+                    <h4>Reference Without Referents</h4>
+                    <p>
+                        A philosophical analysis arguing that LLMs demonstrate language has autonomous self-generative capacity without requiring reference to external objects or speaker intentions. Meaning emerges from distributional structure, not from words 'pointing to' things in the world.
+                    </p>
+                    <p class="research-status">In preparation for Philosophical Review</p>
+                </div>
+
+                <div class="research-item">
+                    <h4>The Autoregressive Brain</h4>
+                    <p>
+                        A comprehensive theoretical paper reconceptualizing memory as generative potential rather than storage-retrieval. Integrates evidence from psychology, neuroscience, and machine learning to argue that cognition operates through sequential state generation.
+                    </p>
+                    <p class="research-status">In preparation for Trends in Cognitive Sciences</p>
+                </div>
+
+                <div class="research-item">
+                    <h4>Morphosyntactic Constraints in Language Models</h4>
+                    <p>
+                        An empirical test of whether function words and morphology constrain predictions independently of semantic content. Results show morphosyntax reduces next-token entropy by ~1 bit even with nonsense content words — supporting the distributional account of syntax.
+                    </p>
+                    <p class="research-status">ArXiv preprint forthcoming</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Empirical Evidence -->
+    <section id="evidence">
+        <div class="container">
+            <h2>Empirical Evidence</h2>
+            <p class="section-subheading">Testing the framework</p>
+
+            <div class="evidence-content">
+                <div class="experiment-box">
+                    <h4>The Morphosyntax Experiment</h4>
+                    <p>
+                        If syntax is distributional structure over high-leverage tokens, then function words (THE, WAS, TO) and morphology (-ING, -ED, -LY) should constrain predictions even when surrounded by nonsense. We tested this by measuring next-token entropy in language models across four conditions:
+                    </p>
+
+                    <div class="conditions-list">
+                        <div class="condition-item">
+                            <div class="condition-label">Real Sentences:</div>
+                            <div class="condition-example">"The teacher was explaining the concept clearly"</div>
+                        </div>
+                        <div class="condition-item">
+                            <div class="condition-label">Jabberwocky:</div>
+                            <div class="condition-example">"The blicket was florping the daxen grentily" (function words + morphology intact)</div>
+                        </div>
+                        <div class="condition-item">
+                            <div class="condition-label">Stripped:</div>
+                            <div class="condition-example">"Ke blicket nar florp ke daxen grenti" (all nonwords, no morphology)</div>
+                        </div>
+                        <div class="condition-item">
+                            <div class="condition-label">Random Nonwords:</div>
+                            <div class="condition-example">Completely unstructured</div>
+                        </div>
+                    </div>
+
+                    <div class="results-box">
+                        <p><strong>Results:</strong></p>
+                        <p class="results-formula">Sentences (7.45 bits) &lt; Jabberwocky (8.04) &lt; Stripped (9.07) &lt; Random (9.27)</p>
+                        <p>
+                            Morphosyntax alone reduces entropy by ~1 bit (p &lt; 0.0001, d = -1.75). Function words and morphological markers constrain prediction independently of semantic content — exactly as predicted by the distributional account.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="experiment-box">
+                    <h4>Connection to Neural Evidence</h4>
+                    <p>
+                        This framework also reinterprets neural findings. Fedorenko et al. (2016) showed that gamma-band activity increases monotonically as people read sentences — but not for word-lists, Jabberwocky, or nonword strings. The standard interpretation: the brain is 'building meaning' compositionally.
+                    </p>
+                    <p>
+                        <strong>The autoregressive interpretation:</strong> the brain is generating a trajectory through semantic state-space. Sentences produce full build-up because both morphosyntactic scaffolding and semantic content constrain the trajectory. Jabberwocky and word-lists produce partial build-up because only one constraint source is present. The gamma increase reflects trajectory construction, not compositional semantics per se.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Writing & Media -->
+    <section id="writing">
+        <div class="container">
+            <h2>Writing &amp; Media</h2>
+
+            <div class="writing-items">
+                <div class="writing-item">
+                    <h4>Substack</h4>
+                    <p>Longer-form writing on cognition, AI, and the autoregressive mind</p>
+                    <p><a href="https://substack.com/@generativebrain" target="_blank">substack.com/@generativebrain</a></p>
+                </div>
+
+                <div class="writing-item">
+                    <h4>Theory of Everything Podcast</h4>
+                    <p>Conversations on consciousness, cognition, and AI</p>
+                    <div class="episode-links">
+                        <p><a href="https://www.youtube.com/watch?v=A36OumnSrWY" target="_blank">Episode 1: The Autoregressive Mind</a></p>
+                        <p><a href="https://www.youtube.com/watch?v=Ca_RbPXraDE" target="_blank">Episode 2: Memory Without Storage</a></p>
+                    </div>
+                </div>
+
+                <div class="writing-item">
+                    <h4>YouTube</h4>
+                    <p>Selected talks and presentations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Affiliations -->
+    <section id="affiliations">
+        <div class="container">
+            <h2>Affiliations</h2>
+
+            <div class="affiliations-grid">
+                <div class="affiliation-card">
+                    <h4>Center for the Future Mind</h4>
+                    <p class="affiliation-role">Associate Director</p>
+                    <p>
+                        Interdisciplinary research center exploring the nature of mind, intelligence, and consciousness in biological and artificial systems.
+                    </p>
+                    <a href="https://www.fau.edu/future-mind/" target="_blank">Visit Center →</a>
+                </div>
+
+                <div class="affiliation-card">
+                    <h4>Machine Perception and Cognitive Robotics Lab</h4>
+                    <p class="affiliation-role">Director</p>
+                    <p>
+                        Research on visual cognition, perceptual learning, and computational models of mind.
+                    </p>
+                    <a href="http://mpcrlab.com/" target="_blank">Visit Lab →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+
+            <div class="contact-content">
+                <div class="contact-item">
+                    <span class="contact-label">Email:</span>
+                    <a href="mailto:ebarenholtz@fau.edu">ebarenholtz@fau.edu</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">X/Twitter:</span>
+                    <a href="https://x.com/ebarenholtz" target="_blank">@ebarenholtz</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-label">Substack:</span>
+                    <a href="https://substack.com/@generativebrain" target="_blank">generativebrain</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Elan Barenholtz</p>
+    </footer>
+</body>
+</html>
