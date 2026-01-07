@@ -1,6 +1,23 @@
 # Website Development Session Log
 **Date:** December 7, 2024
 
+---
+
+## 🚀 RESUME THIS PROJECT IN CLAUDE CODE
+
+**Copy/paste these commands in your terminal:**
+
+```bash
+cd ~/outputs
+claude
+```
+
+**Then tell Claude:**
+
+> I'm working on my academic website project. Please read SESSION_LOG.md in the current directory to see what we've built. The website is live at https://elanbarenholtz.github.io/ and all files are in ~/outputs/
+
+---
+
 ## What We Built
 
 Created a professional single-page academic website for Elan Barenholtz showcasing the Autoregressive Brain research framework.

@@ -1,0 +1,40 @@
+═══════════════════════════════════════════════════════
+  HOW TO RESUME THIS PROJECT IN CLAUDE CODE
+═══════════════════════════════════════════════════════
+
+STEP 1: Open a new terminal and run:
+
+cd ~/outputs
+claude
+
+
+STEP 2: When Claude Code starts, copy/paste this message:
+
+I'm working on my academic website project. Please read SESSION_LOG.md in the current directory to see what we've built. The website is live at https://elanbarenholtz.github.io/ and all files are in ~/outputs/
+
+
+═══════════════════════════════════════════════════════
+  QUICK REFERENCE
+═══════════════════════════════════════════════════════
+
+Website Location:  ~/outputs/
+Live Site:         https://elanbarenholtz.github.io/
+GitHub Repo:       https://github.com/elanbarenholtz/elanbarenholtz.github.io
+Full Documentation: SESSION_LOG.md
+
+
+═══════════════════════════════════════════════════════
+  MAKE CHANGES AND PUSH TO LIVE SITE
+═══════════════════════════════════════════════════════
+
+cd ~/outputs
+# Edit index.html
+git add .
+git commit -m "Your changes"
+git push origin main
+git push origin main:master
+
+Wait 2-5 minutes, then hard refresh: https://elanbarenholtz.github.io/
+
+
+═══════════════════════════════════════════════════════
