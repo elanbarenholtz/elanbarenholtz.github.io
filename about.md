@@ -17,7 +17,7 @@ I also write about these ideas on [Substack](https://substack.com/@generativebra
 
 </div>
 
-## Affiliations
+<h2 class="prose-heading">Affiliations</h2>
 
 <div class="affiliation-grid">
 
@@ -37,7 +37,7 @@ I also write about these ideas on [Substack](https://substack.com/@generativebra
 
 </div>
 
-## Contact
+<h2 class="prose-heading">Contact</h2>
 
 <ul class="contact-list" style="margin-top: 1.5rem;">
   <li>

@@ -100,9 +100,9 @@ img { max-width: 100%; height: auto; }
 
 .hero-photo img {
   width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  object-fit: cover;
+  height: auto;
+  border-radius: 12px;
+  object-fit: contain;
   box-shadow: 0 8px 30px rgba(0,0,0,0.12);
 }
 
@@ -253,6 +253,14 @@ img { max-width: 100%; height: auto; }
 }
 
 .prose a { text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---- Standalone Prose Headings ---- */
+.prose-heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1rem;
+  color: var(--text);
+}
 
 /* ---- Page Header ---- */
 .page-header {
