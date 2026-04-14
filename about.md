@@ -7,7 +7,7 @@ permalink: /about/
 
 <div class="prose" style="margin-bottom: 3rem;">
 
-I'm a Professor of Psychology at Florida Atlantic University and Associate Director of the [Center for the Future Mind](https://www.fau.edu/future-mind/). I direct the [Machine Perception and Cognitive Robotics Lab](http://mpcrlab.com/).
+I'm a Professor of Psychology at Florida Atlantic University and Associate Director of the [Center for the Future Mind](https://www.fau.edu/future-mind/). I direct the [Machine Perception and Cognitive Robotics Lab](https://mpcrlab.com/).
 
 My research program is built around a single idea: that cognition is autoregressive generation over learned distributional structure. I use large language models not as metaphors for the brain but as existence proofs --- demonstrations of what sequential prediction over learned patterns can accomplish without the machinery that cognitive science traditionally assumes is required.
 
@@ -32,7 +32,7 @@ I also write about these ideas on [Substack](https://substack.com/@generativebra
   <h3>Machine Perception &amp; Cognitive Robotics Lab</h3>
   <div class="role">Director</div>
   <p>Research on visual cognition, perceptual learning, and computational models of mind at Florida Atlantic University.</p>
-  <a href="http://mpcrlab.com/" target="_blank">Visit Lab &rarr;</a>
+  <a href="https://mpcrlab.com/" target="_blank">Visit Lab &rarr;</a>
 </div>
 
 </div>
