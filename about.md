@@ -56,4 +56,8 @@ I also write about these ideas on [Substack](https://substack.com/@generativebra
     <span class="label">GitHub</span>
     <a href="https://github.com/elanbarenholtz" target="_blank">elanbarenholtz</a>
   </li>
+  <li>
+    <span class="label">Academic Page</span>
+    <a href="https://mpcrlab.com/people/Elan-Barenholtz/" target="_blank">MPCR Lab &mdash; Elan Barenholtz</a>
+  </li>
 </ul>
