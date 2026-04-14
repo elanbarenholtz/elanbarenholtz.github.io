@@ -53,6 +53,10 @@ I also write about these ideas on [Substack](https://substack.com/@generativebra
     <a href="https://substack.com/@generativebrain" target="_blank">generativebrain</a>
   </li>
   <li>
+    <span class="label">YouTube</span>
+    <a href="https://www.youtube.com/@Elan_Barenholtz" target="_blank">@Elan_Barenholtz</a>
+  </li>
+  <li>
     <span class="label">GitHub</span>
     <a href="https://github.com/elanbarenholtz" target="_blank">elanbarenholtz</a>
   </li>
