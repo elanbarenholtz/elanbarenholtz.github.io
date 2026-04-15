@@ -107,4 +107,13 @@ If cognition is autoregressive generation rather than storage-retrieval, several
 
 This is not a metaphor. It is a mechanistic proposal: cognition is sequential state generation, constrained by distributional structure learned over a lifetime.
 
+
+---
+
+## The Evidence: 74 Phenomena, One Principle
+
+This framework doesn't just offer a new metaphor --- it generates specific, testable explanations across the full range of cognitive phenomena. From garden-path sentences to false memories, from mental rotation to musical earworms, from schizophrenia to the binding problem --- 74 phenomena unified under a single computational principle.
+
+<a href="/blog/2026/04/phenomena-explained-by-autoregressive-theory/" class="btn">Explore All 74 Phenomena &rarr;</a>
+
 </div>
