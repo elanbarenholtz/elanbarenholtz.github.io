@@ -5,7 +5,7 @@ subtitle: A new framework for cognition, memory, and language
 permalink: /theory/
 ---
 
-<div class="prose">
+<div class="prose" markdown="1">
 
 ## The Problem with Storage-Retrieval
 
