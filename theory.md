@@ -5,9 +5,15 @@ subtitle: A new framework for cognition, memory, and language
 permalink: /theory/
 ---
 
-<div class="theory-tabs" style="display: flex; gap: 0; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0;">
-  <a href="/theory/" class="theory-tab" style="padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 600; color: #2d3748; border-bottom: 3px solid #2d3748; margin-bottom: -2px;">Overview</a>
-  <a href="/formalism/" class="theory-tab" style="padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 600; color: #718096;">Formal Statement</a>
+<style>
+.theory-tabs { display: flex; gap: 0; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; }
+.theory-tab { padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 600; color: #718096; }
+.theory-tab--active { color: #2d3748; border-bottom: 3px solid #2d3748; margin-bottom: -2px; }
+</style>
+
+<div class="theory-tabs">
+  <a href="/theory/" class="theory-tab theory-tab--active">Overview</a>
+  <a href="/formalism/" class="theory-tab">Formal Statement</a>
 </div>
 
 <div class="prose" markdown="1">
