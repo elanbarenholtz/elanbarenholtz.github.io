@@ -7,6 +7,12 @@ permalink: /theory/
 
 <div class="prose" markdown="1">
 
+<div class="theory-tabs" style="display: flex; gap: 0; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0;">
+  <a href="/theory/" class="theory-tab" style="padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 600; color: #2d3748; border-bottom: 3px solid #2d3748; margin-bottom: -2px;">Overview</a>
+  <a href="/formalism/" class="theory-tab" style="padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 600; color: #718096;">Formal Statement</a>
+</div>
+
+
 ## The Missing Framework
 
 Cognitive science has no unified theory of cognition. There are theories of memory, theories of perception, theories of language, theories of motor control --- each with its own mechanisms, its own vocabulary, its own computational assumptions. The brain, apparently, runs dozens of specialized systems in parallel, coordinated by means no one can quite specify.
