@@ -7,15 +7,11 @@ permalink: /theory/
 
 <div class="prose" markdown="1">
 
-## The Missing Framework
+## A Unified Theory
 
-Cognitive science has no unified theory of cognition. There are theories of memory, theories of perception, theories of language, theories of motor control --- each with its own mechanisms, its own vocabulary, its own computational assumptions. The brain, apparently, runs dozens of specialized systems in parallel, coordinated by means no one can quite specify.
+The autoregressive framework is a unified theory of memory, attention, perception, learning, and behavior. It rests on a single claim: the brain generates each next cognitive state as the optimal continuation of its own prior output, conditioned on current sensation. This single operation --- sequential self-conditioned generation --- produces what we call perceiving, remembering, attending, speaking, reasoning, and acting. These are not separate faculties requiring separate explanations. They are aspects of the same autoregressive process, observed at different timescales or from different angles.
 
-This fragmentation is not for lack of effort. It reflects a deeper problem: the foundational assumptions shared across most of these theories may be wrong. Storage-retrieval models of memory, rule-based accounts of syntax, modular architectures for perception --- each works tolerably within its own domain, but none connects to the others in a way that explains how a single organ does all of these things simultaneously, in real time, with the same tissue.
-
-What is missing is not another domain-specific model. What is missing is an account of the basic computational operation the brain performs --- one operation, from which perception, memory, language, reasoning, and consciousness emerge as different views of the same process.
-
-The autoregressive framework is that account. The brain generates each next cognitive state as the optimal continuation of its own prior output, conditioned on current sensation. This single principle --- sequential self-conditioned generation --- unifies phenomena that have traditionally required separate explanations.
+Traditional accounts treat these as independent systems: storage-retrieval models of memory, rule-based accounts of syntax, modular architectures for perception. Each works tolerably within its own domain, but none connects to the others in a way that explains how a single organ does all of these things simultaneously, in real time, with the same tissue. The autoregressive framework replaces this collection of domain-specific mechanisms with one computational principle from which all of them emerge.
 
 ## What LLMs Revealed
 
