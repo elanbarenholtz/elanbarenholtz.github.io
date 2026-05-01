@@ -51,50 +51,15 @@ If next-token prediction can do all of this in silicon, we should take seriously
 
 ## Empirical Evidence
 
-### The Morphosyntax Experiment
+### 74 Phenomena, One Principle
 
-If syntax is distributional structure over high-leverage tokens, then function words and morphology should constrain predictions even when surrounded by nonsense. We tested this directly by measuring next-token entropy in language models across four conditions:
+The autoregressive framework is not a theory of one domain. It generates specific, testable accounts across the full range of cognitive phenomena --- behavioral, psychological, neurophysiological, and neuroanatomical.
 
-<div class="experiment-box">
+In **language**, the framework explains garden-path sentences, incremental parsing, structural priming, and the N400 as natural consequences of serial commitment to generated continuations. In **memory**, it accounts for false memories, context-dependent recall, reconsolidation, serial position effects, and the dissolution of the short-term/long-term distinction --- all without positing separate storage systems. In **perception and consciousness**, it explains change blindness, perceptual completion, binocular rivalry, and the stream of consciousness as properties of a system that generates rather than records experience. In **imagery and thought**, mental rotation, mental scanning, and the shared neural substrates of memory and imagination follow from the same generative process running under different constraints. The framework extends to **deliberation and reasoning** (reframing System 1/System 2 as low- vs. high-depth generation), **social cognition** (stereotypes as distributional priors), **aesthetics** (the pleasure of well-constrained generation), and **clinical phenomena** including schizophrenia, confabulation, PTSD, and aphasia. At the **neural level**, it reinterprets feedback-dominant cortical connectivity, gamma-band dynamics, hippocampal replay, and place cells as components of the autoregressive architecture.
 
-<div class="conditions">
-  <div class="condition">
-    <div class="condition-label">Real Sentences:</div>
-    <div class="condition-example">"The teacher was explaining the concept clearly"</div>
-  </div>
-  <div class="condition">
-    <div class="condition-label">Jabberwocky:</div>
-    <div class="condition-example">"The blicket was florping the daxen grentily" (function words + morphology intact)</div>
-  </div>
-  <div class="condition">
-    <div class="condition-label">Stripped:</div>
-    <div class="condition-example">"Ke blicket nar florp ke daxen grenti" (all nonwords, no morphology)</div>
-  </div>
-  <div class="condition">
-    <div class="condition-label">Random Nonwords:</div>
-    <div class="condition-example">Completely unstructured</div>
-  </div>
-</div>
+74 phenomena across 12 domains, unified under a single computational principle.
 
-<div class="results">
-  <p><strong>Results:</strong></p>
-  <p class="formula">Sentences (7.45 bits) &lt; Jabberwocky (8.04) &lt; Stripped (9.07) &lt; Random (9.27)</p>
-  <p>Morphosyntax alone reduces entropy by ~1 bit (p &lt; 0.0001, d = -1.75). Function words and morphological markers constrain prediction independently of semantic content --- exactly as predicted by the distributional account.</p>
-</div>
-
-</div>
-
-### Neural Evidence Reinterpreted
-
-Fedorenko et al. (2016) showed that gamma-band activity increases monotonically as people read sentences --- but not for word-lists, Jabberwocky, or nonword strings. The standard interpretation: the brain is "building meaning" compositionally.
-
-**The autoregressive interpretation:** the brain is generating a trajectory through semantic state-space. Sentences produce full build-up because both morphosyntactic scaffolding and semantic content constrain the trajectory. Jabberwocky and word-lists produce partial build-up because only one constraint source is present. The gamma increase reflects trajectory construction, not compositional semantics per se.
-
-### World Properties Without World Models
-
-Our work on static word embeddings shows that simple co-occurrence statistics encode real-world geographic and climate structure. GloVe and Word2Vec embeddings for city names predict latitude (R² = 0.72), longitude (R² = 0.63), and temperature (R² = 0.64) using only distributional information --- no maps, no thermometers, no explicit world knowledge.
-
-This demonstrates that distributional learning over text captures structure that tracks the physical world, supporting the claim that autoregressive generation over learned distributions can produce contextually appropriate outputs without stored representations of external reality.
+<a href="/blog/2026/04/phenomena-explained-by-autoregressive-theory/" class="btn">Explore All 74 Phenomena &rarr;</a>
 
 ## Implications
 
@@ -149,10 +114,10 @@ The mathematical architecture underlying this framework --- the generator equati
 
 ---
 
-## The Evidence: 74 Phenomena, One Principle
+## Research
 
-This framework doesn't just offer a new metaphor --- it generates specific, testable explanations across the full range of cognitive phenomena. From garden-path sentences to false memories, from mental rotation to musical earworms, from schizophrenia to the binding problem --- 74 phenomena unified under a single computational principle.
+Several lines of empirical and theoretical work are currently testing and extending this framework --- from morphosyntactic constraints in language models to the information geometry of long-range token influence to philosophical accounts of reference without referents.
 
-<a href="/blog/2026/04/phenomena-explained-by-autoregressive-theory/" class="btn">Explore All 74 Phenomena &rarr;</a>
+<a href="/research/" class="btn">Current Projects &rarr;</a>
 
 </div>
