@@ -1,7 +1,7 @@
 ---
 layout: page
-title: The Autoregressive Brain
-subtitle: A new framework for cognition, memory, and language
+title: The Framework
+subtitle: A unified theory of memory, attention, perception, learning, and behavior
 permalink: /theory/
 ---
 
