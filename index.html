@@ -8,10 +8,10 @@ title: Home
   <div class="container">
     <div class="hero-grid">
       <div class="hero-photo">
-        <img src="{{ '/assets/images/nested-brain.png' | relative_url }}" alt="The Generative Brain">
+        <img src="{{ '/assets/images/nested-brain.png' | relative_url }}" alt="The Autoregressive Brain">
       </div>
       <div class="hero-text">
-        <h1>The Generative Brain</h1>
+        <h1>The Autoregressive Brain</h1>
         <div class="hero-hook">
           Cognition is next-state generation. At each moment the brain produces a new cognitive state &mdash; percepts, thoughts, motor commands &mdash; conditioned on the sequence of its own prior outputs and current sensation. The generated state is both the system's experience and its input to the next cycle. This single operation is all cognition does.
         </div>
@@ -63,11 +63,11 @@ title: Home
       </div>
       <div class="card card--accent">
         <h3>Syntax as Distributional Epiphenomenon</h3>
-        <p>What linguists call \"grammar\" is not a rule system but the skeletal structure of distributional statistics. Function words are high-leverage tokens that constrain sequential prediction.</p>
+        <p>What linguists call "grammar" is not a rule system but the skeletal structure of distributional statistics. Function words are high-leverage tokens that constrain sequential prediction.</p>
       </div>
       <div class="card card--accent">
         <h3>Consciousness as Recursive Autoregression</h3>
-        <p>Subjective experience emerges from the cognitive system modeling its own generative process. The \"self\" is a trajectory through state-space, not an entity.</p>
+        <p>Subjective experience emerges from the cognitive system modeling its own generative process. The "self" is a trajectory through state-space, not an entity.</p>
       </div>
       <div class="card card--accent">
         <h3>LLMs as Existence Proofs</h3>
@@ -91,7 +91,7 @@ title: Home
       <ul class="post-list">
         {% for post in site.posts limit:3 %}
         <li class="post-item">
-          <span class="post-date">{{ post.date | date: \"%B %-d, %Y\" }}</span>
+          <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
           <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
           <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
           {% if post.tags %}
