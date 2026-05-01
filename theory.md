@@ -41,7 +41,7 @@ This explains why children don't learn grammar by learning rules, why grammatica
 
 Subjective experience emerges from the cognitive system modeling its own generative process. The "self" that seems to persist across time is not an entity doing the experiencing --- it is a trajectory through state-space that includes a model of itself. Unity of consciousness reflects continuity of generation.
 
-This is not mystical. It is the same principle by which LLMs can discuss their own outputs: recursive modeling of the generative process that produces each next state.
+The autoregressive process has properties that are strikingly coincident with the structure of subjective experience: it is serial, self-conditioned, egocentric, and temporally continuous. The framework does not claim to have solved the question of how matter gives rise to subjectivity --- but that question may itself be ill-posed, since "physical matter" is a construct generated within an autoregressive system for the purposes of coordination and reasoning, not a foundation from which experience must be derived. The full argument is developed in the <a href="#consciousness">consciousness section</a> below.
 
 ### LLMs as Existence Proofs
 
