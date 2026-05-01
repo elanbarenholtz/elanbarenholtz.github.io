@@ -13,13 +13,13 @@ title: Home
       <div class="hero-text">
         <h1>The Generative Brain</h1>
         <div class="hero-hook">
-          The brain generates each cognitive state by conditioning on the sequence of its own prior outputs. Cognition is autoregressive: the system's input is what it has already produced.
+          Cognition is next-state generation. At each moment the brain produces a new cognitive state &mdash; percepts, thoughts, motor commands &mdash; conditioned on the sequence of its own prior outputs and current sensation. The generated state is both the system's experience and its input to the next cycle. This single operation is all cognition does.
         </div>
         <p>
-          The Autoregressive Brain framework proposes that cognition operates as sequential state generation &mdash; not by storing and retrieving representations, but by continuously generating each next state as the optimal continuation of the preceding trajectory. Memory, language, reasoning, and consciousness are all downstream consequences of this single principle.
+          Perception, memory, language, reasoning, and action are not separate faculties. They are aspects of the same autoregressive process: the brain generating each next state as the optimal continuation of the preceding trajectory. What we call memory is the continued influence of past generation on present generation. What we call attention is the convergence of multiple modalities into a single next state. What we call behavior is generated content that happens to move muscles.
         </p>
         <p>
-          Large language models serve as existence proofs: autoregressive prediction over learned distributional structure produces composition, context-sensitivity, and apparent understanding &mdash; without any of the machinery cognitive science has traditionally assumed is required.
+          Large language models are not merely analogies &mdash; they are running the linguistic case of the same architecture. Autoregressive generation over learned distributional structure produces composition, context-sensitivity, and apparent understanding without any of the machinery cognitive science has traditionally assumed is required.
         </p>
         <div style="margin-top: 1.5rem;">
           <a href="{{ '/theory' | relative_url }}" class="btn">Explore the Framework &rarr;</a>
@@ -63,11 +63,11 @@ title: Home
       </div>
       <div class="card card--accent">
         <h3>Syntax as Distributional Epiphenomenon</h3>
-        <p>What linguists call "grammar" is not a rule system but the skeletal structure of distributional statistics. Function words are high-leverage tokens that constrain sequential prediction.</p>
+        <p>What linguists call \"grammar\" is not a rule system but the skeletal structure of distributional statistics. Function words are high-leverage tokens that constrain sequential prediction.</p>
       </div>
       <div class="card card--accent">
         <h3>Consciousness as Recursive Autoregression</h3>
-        <p>Subjective experience emerges from the cognitive system modeling its own generative process. The "self" is a trajectory through state-space, not an entity.</p>
+        <p>Subjective experience emerges from the cognitive system modeling its own generative process. The \"self\" is a trajectory through state-space, not an entity.</p>
       </div>
       <div class="card card--accent">
         <h3>LLMs as Existence Proofs</h3>
@@ -91,7 +91,7 @@ title: Home
       <ul class="post-list">
         {% for post in site.posts limit:3 %}
         <li class="post-item">
-          <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+          <span class="post-date">{{ post.date | date: \"%B %-d, %Y\" }}</span>
           <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
           <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
           {% if post.tags %}
