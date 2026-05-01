@@ -7,6 +7,17 @@ permalink: /theory/
 
 <div class="prose" markdown="1">
 
+<style>
+.theory-tabs { display: flex; gap: 0; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; }
+.theory-tab { padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 600; color: #718096; }
+.theory-tab--active { color: #2d3748; border-bottom: 3px solid #2d3748; margin-bottom: -2px; }
+</style>
+
+<div class="theory-tabs">
+  <a href="/theory/" class="theory-tab theory-tab--active">Overview</a>
+  <a href="/formalism/" class="theory-tab">Formal Statement</a>
+</div>
+
 ## A Unified Theory
 
 The autoregressive framework is a unified theory of memory, attention, perception, learning, and behavior. It rests on a single claim: the brain generates each next cognitive state as the optimal continuation of its own prior output, conditioned on current sensation. This single operation --- sequential self-conditioned generation --- produces what we call perceiving, remembering, attending, speaking, reasoning, and acting. These are not separate faculties requiring separate explanations. They are aspects of the same autoregressive process, observed at different timescales or from different angles.
