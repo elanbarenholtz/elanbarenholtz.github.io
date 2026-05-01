@@ -5,17 +5,6 @@ subtitle: A new framework for cognition, memory, and language
 permalink: /theory/
 ---
 
-<style>
-.theory-tabs { display: flex; gap: 0; margin-bottom: 2rem; border-bottom: 2px solid #e2e8f0; }
-.theory-tab { padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 600; color: #718096; }
-.theory-tab--active { color: #2d3748; border-bottom: 3px solid #2d3748; margin-bottom: -2px; }
-</style>
-
-<div class="theory-tabs">
-  <a href="/theory/" class="theory-tab theory-tab--active">Overview</a>
-  <a href="/formalism/" class="theory-tab">Formal Statement</a>
-</div>
-
 <div class="prose" markdown="1">
 
 ## The Missing Framework
@@ -122,13 +111,43 @@ If cognition is autoregressive generation rather than storage-retrieval, several
 
 This is not a metaphor. It is a mechanistic proposal: cognition is sequential state generation, constrained by distributional structure learned over a lifetime.
 
+## Consciousness {#consciousness}
 
+### The Autoregressive Stream Is Conscious Experience
+
+The autoregressive framework does not merely accommodate consciousness --- it identifies it. The serial, contextual sequence of generated states is not correlated with conscious experience. It *is* conscious experience. What enters the generated sequence is conscious; what remains in the parallel sensory state without being integrated into that sequence is not. Attention and consciousness are the same thing: the funneling of an enormous parallel state into a single serial stream.
+
+This gives unity of consciousness for free: there is one generator, producing one state at a time. It gives the stream quality of experience: each state conditions the next, producing the continuous temporal flow that characterizes subjective life. And it gives the relationship between attention and consciousness without remainder: you cannot be conscious of what you have not generated.
+
+### Subjectivity as Recursive Navigation
+
+The deeper question --- why this process constitutes subjective experience, why there is something it is like to be a system running this architecture --- has traditionally been treated as unanswerable by physical theory. The autoregressive framework gets closer than any account I am aware of.
+
+Subjectivity is what recursive output-intake navigation of an egocentric decision space *is*, from the only perspective available to the system: its own generated trajectory.
+
+Consider what the architecture entails. The system's only access to anything --- the world, its own body, its own prior states --- is through the sequence it generates. It is constitutively locked into its own perspective. There is no view from outside, because "outside" is not a location in the system's state-space. The system navigates a space of possibilities structured by consequences to itself, generating each next position from where it currently stands, conditioned on where it has been. That navigation --- egocentric, sequential, self-conditioned --- is not a process that *produces* experience as a byproduct. It is what experience *is*.
+
+The hard problem assumes that processing and experience are two things that need connecting: there is the computation, and then there is the "what it's like," and the mystery is how one gives rise to the other. But if subjectivity just *is* what it is to be a system recursively navigating an egocentric decision space through its own generated output, there is no second thing to explain. The computation, done this way --- self-conditioned, serial, egocentric, consequential --- *is* the subjective experience. You do not need to add qualia to the process. The process, structured this way, is qualia.
+
+### What Falls Out
+
+This account explains several features of consciousness that are otherwise mysterious:
+
+**Why consciousness is serial.** Not because of limited resources, but because the generator produces one state at a time. Seriality is not a constraint on consciousness; it is a constitutive feature of the autoregressive process that consciousness is.
+
+**Why anesthesia abolishes consciousness.** It disrupts the autoregressive loop. The parallel processing in the sensory state may continue, but the generator stops producing the serial, contextual stream. No stream, no experience.
+
+**Why dreams are conscious.** The generator runs with sensation largely disconnected. The autoregressive process continues --- self-conditioned generation proceeds --- and so experience continues, even though the content is unconstrained by external input.
+
+**Why flow states feel different.** The generator runs with reduced self-modeling in the generated state. The autoregressive stream continues, but it contains less recursive content about its own operation. The system is still conscious but less conscious *of itself*.
+
+**Why the binding problem dissolves.** Components of experience were never separate in the generator. The question "how does the brain bind color, shape, and motion into a unified percept?" presupposes that these are computed separately and then combined. In the autoregressive framework, they are generated together as aspects of a single output state. There is nothing to bind.
 
 ---
 
 ## Formal Statement
 
-The mathematical architecture underlying this framework --- the universal cognition operator, ten core claims, physiological predictions, and the information geometry of memory --- is developed in full on a dedicated page.
+The mathematical architecture underlying this framework --- the generator equation, core claims, physiological predictions, and the information geometry of memory --- is developed in full on a dedicated page.
 
 <a href="/formalism/" class="btn">Read the Formal Statement &rarr;</a>
 
