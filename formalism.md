@@ -20,33 +20,13 @@ permalink: /formalism/
   <a href="/formalism/" class="theory-tab theory-tab--active">Formal Statement</a>
 </div>
 
-*A formal statement of the core claims, architecture, and consequences*
-
----
-
-### The Problem
-
-The world has temporally extended structure. Objects persist, events unfold, causes precede effects, actions produce consequences. None of this is available in an instantaneous sensory slice. Any system that must act on this structure --- and all behaving organisms must --- needs to maintain and operate over sequences.
-
-Not all sequential processing requires autoregression. Sensation-local filters --- Reichardt-style motion detection, onset and offset responses --- extract temporal features directly from the input stream. These are real and biologically widespread. What they cannot do is build trajectories, track content across gaps in sensation, or generate structure the signal does not contain.
-
-Cognition is the regime that does. The autoregressive architecture is the solution to the problem of operating on temporally extended structure in the service of behavior.
-
----
-
-### The Architecture
-
-The brain performs extensive parallel processing that is not autoregressive --- sensory transduction, feature extraction, homeostatic regulation, autonomic control, reflexes. This processing is real, biologically critical, and not the subject of this theory. It produces the sensory state \\(E_t\\).
-
-Cognition is a computationally distinct process that takes this massive parallel state and generates a serial, contextual stream. This process is \\(\mathcal{G}\\). Not everything the brain does is \\(\mathcal{G}\\). But everything we call cognition is. The move from parallel sensory state to integrated cognitive state --- from \\(E\\) to \\(y\\) --- is what the generator does, and it matches the intuition of what attention is: the funneling of an enormous concurrent state into a single sequential stream.
-
 The entire theory reduces to one equation:
 
 #### The Generator
 
 $$y_t = \mathcal{G}(W_t,\; C_t,\; y_{t-1},\; E_t)$$
 
-At each moment the system produces a new state \\(y_t\\). This state includes everything the system generates: percepts, thoughts, inner speech, imagined actions, and motor commands. These are not different operations. They are different varieties of the same generated output. The system does not distinguish between "I am perceiving," "I am thinking," and "I am acting" at the point of generation. It just generates its next state.
+At each moment the system produces a new state \\(y_t\\). This state is the system's generated experience: percepts, thoughts, inner speech, imagery. It is the perceptual-cognitive token --- what the system produces and what it ingests on the next cycle. The system does not distinguish between "I am perceiving" and "I am thinking" at the point of generation. It just generates its next experience.
 
 The generated state \\(y_t\\) is conditioned on:
 
@@ -55,15 +35,17 @@ The generated state \\(y_t\\) is conditioned on:
 - \\(C_t\\) --- fast state: transient activation carrying the recent trajectory of generation.
 - \\(W_t\\) --- slow structure: the cumulative shaping of connectivity by the system's history.
 
-All of \\(y_t\\) feeds back into the next cycle as \\(y_{t-1}\\). All of it. The perceptual content, the linguistic content, the motor content --- it all conditions the next round of generation. The system's input is what it has already produced.
+Each \\(y_t\\) feeds back into the next cycle as \\(y_{t-1}\\). The system's input is what it has already produced --- its own prior experience, not its prior behavior.
 
-Some components of \\(y_t\\) also happen to be connected, via anatomy, to muscles. That motor content has consequences in the world. But from the generator's perspective there is nothing special about it --- it is generated in exactly the same way as a percept or a thought.
+The generator does not compute behavior. Motor commands, hormonal signals, autonomic activation --- these are consequences of the neural activity that produces \\(y_t\\), not outputs of the generator itself. The same tissue that generates experience is connected, via anatomy, to muscles and glands. That connectivity has consequences in the world and body. But from the computational perspective of the autoregressive loop, those consequences are invisible until they return as sensation.
+
+The system never feels a motor command. It feels the position of its limb --- proprioception processed into a percept. It never feels sympathetic activation directly. It feels its heart racing --- interoception processed into a percept. The only thing the system ever ingests is its own perceptual output.
 
 #### The Environment
 
-$$E_{t+1} = \text{Env}(E_t,\; y_t)$$
+$$E_{t+1} = \text{Env}(E_t,\; a_t)$$
 
-The world evolves, partly in response to whatever motor-relevant content was present in \\(y_t\\). The perceptual consequences of the system's actions return as ordinary sensation \\(E_{t+1}\\). There is no special action-feedback channel. The system's own speech, the visual consequences of its movements, the tactile results of its grasps --- all arrive as \\(E\\), indistinguishable in kind from any other sensation. The system never sees its own behavior. It only sees what comes back.
+where \\(a_t\\) denotes the behavioral consequences of the neural activity underlying the generation of \\(y_t\\). The world evolves, partly in response to whatever the body did as a consequence of the most recent generative cycle. The perceptual consequences of those actions return as ordinary sensation \\(E_{t+1}\\). There is no action-feedback channel. The system's own speech, the visual consequences of its movements, the tactile results of its grasps --- all arrive as \\(E\\), indistinguishable in kind from any other sensation. The system never observes its own behavior. It only experiences what comes back.
 
 #### State Updates
 
@@ -76,9 +58,10 @@ Every cycle of generation is simultaneously a cycle of encoding and learning. \\
 | Symbol | Definition |
 |--------|-----------|
 | \\(\mathcal{G}\\) | The generator. Every cognitive act is one application of this operator. |
-| \\(y_t\\) | The system's generated state: percepts, thoughts, inner speech, motor commands, and all other content. Everything the system produces in a single cycle. |
-| \\(y_{t-1}\\) | Prior generated state, fed back as the primary conditioning substrate. This is what makes the system autoregressive. |
-| \\(E_t\\) | Exogenous sensation: input from the environment and body, including the perceptual consequences of the system's own prior behavior. |
+| \\(y_t\\) | The system's generated experience: percepts, thoughts, inner speech, imagery. The perceptual-cognitive token. Everything the system experiences in a single cycle. Does not include motor or autonomic outputs, which are downstream consequences of the neural activity underlying generation. |
+| \\(y_{t-1}\\) | Prior generated experience, fed back as the primary conditioning substrate. This is what makes the system autoregressive. |
+| \\(E_t\\) | Exogenous sensation: input from the environment and body, including the perceptual consequences of the system's own prior behavior. Sensation is not perception --- it is raw input that the generator processes into the perceptual content of \\(y_t\\). |
+| \\(a_t\\) | Behavioral output: motor commands, hormonal signals, autonomic activation. These are consequences of the neural activity that produces \\(y_t\\), not computed outputs of the generator. The system has no direct access to \\(a_t\\). |
 | \\(W_t\\) | Slow structure: cumulative shaping of connectivity. Modified continuously during operation. No separate training regime. |
 | \\(C_t\\) | Fast state: transient activation carrying recent trajectory. Decays on short timescales. |
 
@@ -86,7 +69,7 @@ Every cycle of generation is simultaneously a cycle of encoding and learning. \\
 
 ### Core Claims
 
-**01. All behavior is next-state generation.** Every externally observable act --- movement, speech, gesture --- is produced by the generator operating over encoded sequence. Human language is literally next-token generation: the same autoregressive process that produces perception produces speech. LLMs are not simulating this process; they are running the linguistic case of the same architecture.
+**01. Behavior is a consequence of generation, not a computed output.** The neural activity that produces each perceptual-cognitive state \\(y_t\\) also drives muscles, glands, and autonomic pathways --- by anatomy, not by computation. The system does not generate motor commands as outputs of the autoregressive loop. It generates experience. Behavior happens because the tissue that generates experience is connected to effectors. The consequences of that behavior return as ordinary sensation, indistinguishable from any other input.
 
 **02. The sequence is self-generated.** The sequence over which cognition operates is the system's own prior output. This is what makes it autoregressive. Perception is the system generating its processed version of the world, informed by sensation but not identical to it. Thought is the same process with sensation playing a lesser role. Both are instances of the system feeding itself the processed output of the previous cycle as input to the next.
 
@@ -94,7 +77,7 @@ Every cycle of generation is simultaneously a cycle of encoding and learning. \\
 
 **04. Attention is the autoregressive process itself.** The serial nature of conscious experience is not a limitation imposed by a bottleneck or a resource constraint. It is a structural necessity: multiple modalities converge into the generation of a single next state \\(y_t\\). Attention is this convergence. The system can only generate one \\(y_t\\) at a time, and what we call "attending" to something is that thing dominating the current generation step. Inattentional blindness is not a failure to notice --- it is a failure to generate.
 
-**05. The system optimizes over what it can see for outcomes it cannot see.** Some components of \\(y_t\\) have motor consequences that exit the body and change the world. The system never observes those consequences directly --- they return only as sensation \\(E_{t+1}\\). Behavior is the entire reason the system exists, but behavior is beyond the system's computational purview. It can only learn to generate states that tend to produce favorable returning sensation. This indirection is the architecture.
+**05. The system has no direct access to its own behavior.** The system generates experience; behavior is a downstream consequence of the neural activity underlying that generation. The system never observes \\(a_t\\) --- it only experiences \\(E_{t+1}\\), the sensation that returns. It cannot distinguish self-caused sensation from world-caused sensation. Optimization occurs because temporal contiguity in the trajectory provides statistical structure: states that tend to be followed by favorable sensation get reinforced in \\(W\\). But the system never learns "when I do X, Y happens." It learns "states like this tend to be followed by sensation like that." Attribution of agency is itself a generated construct --- a compression of trajectory regularities into an efficient token, not a report from a privileged self-monitoring channel.
 
 **06. Memory is continuous encoding.** There is no discrete storage event, no separate write operation. Every cycle of the generator simultaneously produces the current state and encodes it into the system's structure --- \\(C\\) is updated with the current trajectory, \\(W\\) is reshaped by the current activity. Generation *is* encoding.
 
@@ -102,11 +85,11 @@ Every cycle of generation is simultaneously a cycle of encoding and learning. \\
 
 **08. The short-term/long-term distinction dissolves.** There are not two memory systems. There is influence at different timescales. \\(C\\) carries influence that decays over seconds --- what is traditionally called working memory. \\(W\\) carries influence that persists across a lifetime --- what is traditionally called long-term memory. The difference is the time constant of the substrate, not the nature of the operation. The forgetting curve is not the rate at which the brain loses what it stored. It is the rate at which successive autoregressive compression reduces the specificity needed for regeneration.
 
-**09. A single optimization process shapes both behavior and representation.** \\(W\\) is continuously modified by a process that jointly achieves two outcomes. First, it shapes the system to generate states whose motor components, acting through the world and returning as sensation, are favorable --- this is behavioral optimization. Second, it shapes the system to generate \\(y_t\\) in a format that the generator can most effectively condition on in the next cycle --- this is representational optimization, entirely within the loop. The system does not just learn *what* to generate; it learns *how* to generate in a form optimized for its own subsequent ingestion. Development is partly the progressive refinement of output format. Inner speech may be specifically useful because linguistic tokens are a format co-optimized with the machinery that runs on them.
+**09. A single optimization process shapes both the trajectory and its format.** \\(W\\) is continuously modified by a process that jointly achieves two outcomes. First, it shapes the system to generate experiential states that tend to be followed by favorable returning sensation --- this is behavioral optimization, achieved indirectly through temporal contiguity. Second, it shapes the system to generate \\(y_t\\) in a format that the generator can most effectively condition on in the next cycle --- this is representational optimization, entirely within the loop. The system does not just learn *what* to generate; it learns *how* to generate in a form optimized for its own subsequent ingestion. Development is partly the progressive refinement of output format. Inner speech may be specifically useful because linguistic tokens are a format co-optimized with the machinery that runs on them.
 
 **10. Consciousness is the autoregressive stream.** The serial, contextual sequence of generated states \\(y_t\\) is not merely correlated with conscious experience. It *is* conscious experience. Unity of consciousness follows structurally: one generator, one output at each moment. The stream quality of experience follows from the autoregressive dependence of each state on its predecessor. The binding problem dissolves at the architectural level --- components were never separate in the generator. What enters the generated sequence is conscious; what remains in \\(E\\) without being integrated into \\(y\\) is not. Attention and consciousness are the same thing: the funneling of parallel state into serial generation. The deeper question --- why this architecture constitutes subjectivity --- is addressed in the <a href="/theory/#consciousness">full theoretical treatment</a>.
 
-> Perception, memory, action, learning, language, reasoning, consciousness, and imagination are all instances of \\(\mathcal{G}\\) --- the same operation seen from different angles or at different timescales. Cognition is one equation.
+> Perception, memory, learning, language, reasoning, consciousness, and imagination are all instances of \\(\mathcal{G}\\) --- the same operation seen from different angles or at different timescales. Behavior is a consequence of that operation, not a separate computation. Cognition is one equation.
 
 ---
 
