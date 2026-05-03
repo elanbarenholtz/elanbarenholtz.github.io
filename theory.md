@@ -20,9 +20,17 @@ permalink: /theory/
 
 ## A Unified Theory
 
-The autoregressive framework is a unified theory of memory, attention, perception, learning, and behavior. It rests on a single claim: the brain generates each next cognitive state as the optimal continuation of its own prior output, conditioned on current sensation. This single operation --- sequential self-conditioned generation --- produces what we call perceiving, remembering, attending, speaking, reasoning, and acting. These are not separate faculties requiring separate explanations. They are aspects of the same autoregressive process, observed at different timescales or from different angles.
+The autoregressive framework is a unified theory of memory, attention, perception, learning, and behavior. It rests on a single claim: the brain generates each next perceptual-cognitive state --- each next experience --- as the optimal continuation of its own prior output, conditioned on current sensation. This single operation --- sequential self-conditioned generation --- produces what we call perceiving, remembering, attending, speaking, reasoning, and acting. Behavior is not computed by this process; it is a consequence of the neural activity that generates experience, driven by the same tissue's anatomical connections to muscles and glands. These are not separate faculties requiring separate explanations. They are aspects of the same autoregressive process, observed at different timescales or from different angles.
 
 Traditional accounts treat these as independent systems: storage-retrieval models of memory, rule-based accounts of syntax, modular architectures for perception. Each works tolerably within its own domain, but none connects to the others in a way that explains how a single organ does all of these things simultaneously, in real time, with the same tissue. The autoregressive framework replaces this collection of domain-specific mechanisms with one computational principle from which all of them emerge.
+
+## Why Autoregression
+
+The world has temporally extended structure. Objects persist, events unfold, causes precede effects, actions produce consequences. None of this is available in an instantaneous sensory slice. Any system that must act on this structure needs to maintain and operate over sequences.
+
+Not all sequential processing requires autoregression. Sensation-local filters --- Reichardt-style motion detection, onset and offset responses --- extract temporal features directly from the input stream. These are real and biologically widespread. What they cannot do is build trajectories, track content across gaps in sensation, or generate structure the signal does not contain. Cognition is the regime that does.
+
+The brain performs extensive parallel processing that is not autoregressive --- sensory transduction, feature extraction, homeostatic regulation, autonomic control, reflexes. This processing is real, biologically critical, and not the subject of this theory. Cognition is a computationally distinct process that takes this massive parallel state and generates a serial, contextual stream. The move from parallel sensory state to integrated cognitive state is what the generator does, and it matches the intuition of what attention is: the funneling of an enormous concurrent state into a single sequential stream.
 
 ## What LLMs Revealed
 
