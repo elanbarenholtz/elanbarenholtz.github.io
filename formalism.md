@@ -17,6 +17,7 @@ permalink: /formalism/
 
 <div class="theory-tabs">
   <a href="/theory/" class="theory-tab">Overview</a>
+  <a href="/philosophical/" class="theory-tab">Philosophical</a>
   <a href="/formalism/" class="theory-tab theory-tab--active">Formal Statement</a>
 </div>
 
