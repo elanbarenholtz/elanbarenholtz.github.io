@@ -179,10 +179,4 @@ The mathematical architecture underlying this framework --- the generator equati
 
 ---
 
-## Research
-
-Several lines of empirical and theoretical work are currently testing and extending this framework --- from morphosyntactic constraints in language models to the information geometry of long-range token influence to philosophical accounts of reference without referents.
-
-<a href="/research/" class="btn">Current Projects &rarr;</a>
-
 </div>
