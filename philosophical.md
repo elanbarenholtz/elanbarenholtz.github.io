@@ -16,6 +16,7 @@ permalink: /philosophical/
 <div class="theory-tabs">
   <a href="/theory/" class="theory-tab">Overview</a>
   <a href="/philosophical/" class="theory-tab theory-tab--active">Philosophical</a>
+  <a href="/evidence/" class="theory-tab">Evidence</a>
   <a href="/formalism/" class="theory-tab">Formal Statement</a>
 </div>
 
