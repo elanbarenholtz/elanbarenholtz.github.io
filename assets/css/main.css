@@ -134,6 +134,19 @@ img { max-width: 100%; height: auto; }
   line-height: 1.8;
 }
 
+.hero-text > p.hero-rule {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+  color: var(--primary);
+  border-left: 3px solid var(--primary);
+  padding: 0.35rem 0 0.35rem 1rem;
+  margin: 0 0 1.5rem;
+}
+
+.hero-text > p + p {
+  margin-top: 1rem;
+}
+
 /* ---- Section ---- */
 .section {
   padding: 5rem 0;
@@ -552,6 +565,7 @@ img { max-width: 100%; height: auto; }
   .hero-photo img { width: 200px; height: 200px; }
   .hero-text h1 { font-size: 2rem; }
   .hero-hook { font-size: 1.15rem; }
+  .hero-text > p.hero-rule { border-left: none; padding-left: 0; }
 
   .nav-links { display: none; }
   .nav-links.open {
